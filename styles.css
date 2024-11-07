@@ -1,0 +1,161 @@
+/* Reset básico e configuração de fonte */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EBEBEB;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+/* Sidebar */
+.sidebar-logo {
+    position: relative;
+}
+
+.sidebar-logo img {
+    max-width: 70%;
+    height: auto;
+    margin: 20px;
+    position: absolute;
+}
+
+/* Linha de separação */
+.separator {
+    width: 1px;
+    background-color: #929292;
+    height: 100vh;
+    position: fixed;
+    left: 310px;
+    top: 0;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 300px;
+    padding: 40px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-top: -30px;
+    margin-left: 340px;
+}
+
+.title-underline {
+    width: 20%;
+    height: 2px;
+    background-color: #E97911;
+    margin: 8px 0 20px 0;
+    margin-left: 300px;
+}
+
+.notification-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 8px 12px; /* Menos padding para reduzir a altura */
+    margin-bottom: 10px; /* Menor distância entre os cards */
+    border-left: 10px solid #E97911;
+    width: 35%;
+    max-width: 400px;
+    margin-left: 205px;
+    cursor: pointer;
+    min-height: 80px; /* Definir uma altura mínima para o card */
+    overflow: hidden; /* Garante que não haverá rolagem interna */
+}
+
+.h2{
+    font-size: 8px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    font-size: 30px;
+    color: #535353;
+}
+
+.alert-icon i {
+    color: rgb(163, 8, 8);
+}
+
+/* Estilos do modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-profile {
+    display: flex;
+    margin-top: 15px;
+}
+
+.modal-profile i {
+    font-size: 30px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.modal-profile span {
+    font-size: 16px;
+    color: #333;
+}
+
+h3 {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+}
+
+.modal-description {
+    font-size: 15px;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* Classe para escurecer o fundo ao abrir o modal */
+.modal-open {
+    overflow: hidden;
+}
+
+.amount{
+    color: green;
+}

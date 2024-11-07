@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="separator"></div>
+        </div>
+
+        <div class="main-content">
+            
+            <h1 class="title">Notificações</h1>
+            <div class="title-underline"></div>
+
+            <!-- Notificação de denúncia com ícone de alerta em triângulo -->
+            <div class="notification-card" onclick="openModal()">
+                <div class="icon alert-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Você recebeu uma denúncia.</h2>
+                    <p class="card-description">Algum conteúdo explicando a denúncia, clique para ver o conteúdo</p>
+                </div>
+            </div>
+
+            <!-- Notificação de Início de Trabalho -->
+            <div class="notification-card">
+                <div class="icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Notificação de Início de Trabalho</h2>
+                    <p class="card-description">Assistente Administrativo - Maria Clara</p>
+                    <p class="card-details">O trabalho começará em 1 hora</p>
+                </div>
+            </div>
+
+            <!-- Notificação de pagamento realizado -->
+            <div class="notification-card">
+                <div class="icon">
+                    <i class="fas fa-wallet"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Assistente Administrativo - Empresa 1</h2>
+                    <p class="card-description">Assistente Administrativo - Maria Clara</p>
+                    <p class="card-details">Início: 08:30 | Término: 17:30 | <span class="amount">Valor: R$200.00</span></p>
+                </div>
+            </div>
+
+            <!-- Notificação de trabalho aceito -->
+            <div class="notification-card">
+                <div class="icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="card-content">
+                    <h2>Notificação de Trabalho Aceito</h2>
+                    <p class="card-description">Empresa 1 aceitou seu trabalho</p>
+                </div>
+            </div>
+
+            <!-- Notificação de trabalho recusado -->
+            <div class="notification-card">
+                <div class="icon">
+                    <i class="fas fa-times"></i> <!-- Ícone de "X" -->
+                </div>
+                <div class="card-content">
+                    <h2>Notificação de Trabalho Recusado</h2>
+                    <p class="card-description">Empresa 1 recusou seu trabalho</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!-- Modal de denúncia -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            
+            <h2>Você recebeu uma denúncia</h2>
+            <div class="modal-profile">
+                <i class="fas fa-user-circle"></i>
+                <span>Empresa 1 - Assistente Administrativo </span>
+            </div>
+            <h3>Descrição da denúncia:</h3>
+            <p class="modal-description">Trabalho focado em organizar e atender 
+                clientes com intuito de disponibilidade hoje!</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById("modal").style.display = "flex";
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+    </script>
+</body>
+</html>
